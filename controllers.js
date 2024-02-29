@@ -25,10 +25,10 @@ export const token = async (req, res) => {
             },
             data: data
         };
-        const response = await axios.get('https://api.covidtracking.com/v1/us/current.json');
-        res.status(200).json(response.data);
-        // let response = await axios.request(config);
+        // const response = await axios.get('https://api.covidtracking.com/v1/us/current.json');
         // res.status(200).json(response.data);
+        let response = await axios.request(config);
+        res.status(200).json(response.data);
     } catch (error) {
        if (error.code === 'ECONNABORTED') {
             res.status(408).json({ error: 'Tiempo de espera agotado en la solicitud POST.' });
