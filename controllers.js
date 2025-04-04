@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import axios from 'axios';
 // const SERVICE_URL = process.env.SERVICE_URL;
-const SERVICE_URL = 'http://10.188.3.18/wsDockOne/api';
+const SERVICE_URL = 'http://x.x.x.x/wsDockOne/api';
 export const healthcheck = (req, res) => {
     try {
         res.status(200).json('Conectado....');
